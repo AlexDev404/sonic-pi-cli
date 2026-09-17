@@ -5,7 +5,7 @@ A simple command line interface for Sonic Pi, written in Ruby.
 
 **Requires Sonic Pi v2.7 or higher**.
 
-ver 0.1.3 allows compatibility with Sonic Pi v3.2: tested on Linux, Raspberry Pi and Windows
+Current code supports both the older fixed-port releases and newer Sonic Pi releases which expose dynamic ports and an auth token via `.sonic-pi/log/gui.log`.
 
 Installation
 -------
@@ -16,6 +16,8 @@ Usage
 -----
 
 Sonic Pi must be running, as this is just a client.
+
+The client reads Sonic Pi connection details from the standard `.sonic-pi` directory in your home folder. You can override that location with `SONIC_PI_HOME`.
 
     sonic_pi play 50
     sonic_pi sample :loop_breakbeat, rate: 0.5
